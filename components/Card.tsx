@@ -11,8 +11,8 @@ const share_tech_mono = Share_Tech_Mono({
 
 const Card = () => {
   return (
-    <div className="flex max-h-[600px] mt-10 text-base font-normal text-white px-10 bg-local rounded-xl mr-auto max-w-7xl ml-auto w-full from-white to-red-500 
-    bg-[url('/assets/img/noisy-img.png')] pt-0 pb-12 leading-6 auto-cols-fr grid-cols-5 gap-y-6 gap-x-6 row-span-1 col-span-5 overflow-hidden">
+    <div className="flex mt-10 text-white rounded-xl max-w-7xl w-full from-white to-black 
+    bg-[url('/assets/img/noisy-img.png')] pb-12 overflow-hidden">
       <div className='px-16 py-16'>
         <div className="bg-gray-700 rounded-lg inline-block  px-4 py-4">
           <div className='flex justify-center '>
