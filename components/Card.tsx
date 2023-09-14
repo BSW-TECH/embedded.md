@@ -39,8 +39,8 @@ const Card = () => {
               </div>
             </span>
             <div className='p-4'></div>
-            <div className={share_tech_mono.className} >
-              <Link href="/blog" className='hover:bg-gray-700 text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider'>
+            <div className={`${share_tech_mono.className} max-w-[180px]`}>
+              <Link href="/blog" className='flex hover:bg-gray-700 text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider flex-nowrap'>
                 <span>Join the Dojo</span>
               </Link>
             </div>
