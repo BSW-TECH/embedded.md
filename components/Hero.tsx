@@ -20,7 +20,7 @@ const Hero = () => {
         </h1>
         <div className="pt-6"></div>
 
-        <div className={`flex self-center ${share_tech_mono.className} max-w-[90%] text-2xl text-center`}>
+        <div className={`flex self-center ${share_tech_mono.className} max-w-[90%] text-2xl text-center flex-wrap`}>
           <span>Improve your development skills by training with your peers on code kata that continuously challenge and push your coding practice.</span>
         </div>
 
