@@ -18,13 +18,12 @@ const Hero = () => {
           <br />
           through challenge
         </h1>
-        <div className="p-6"></div>
-        <span className="text-2xl text-center">
-          <div className={share_tech_mono.className}>
-            Improve your development skills by training with your peers on code kata that continuously challenge and push your coding practice.
-          </div>
+        <div className="pt-6"></div>
 
-        </span>
+        <div className={`flex self-center ${share_tech_mono.className} max-w-[90%] text-2xl text-center`}>
+          <span>Improve your development skills by training with your peers on code kata that continuously challenge and push your coding practice.</span>
+        </div>
+
         <div className="p-6"></div>
         <div className="flex justify-center">
           <Link href="/blog" className={share_tech_mono.className}>
