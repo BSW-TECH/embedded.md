@@ -1,3 +1,4 @@
+import React from "react"
 import Hero from "@/components/Hero"
 import Card from "@/components/Card"
 import Image from "next/image"
@@ -19,8 +20,8 @@ const Home = () => {
       >
 
       </Image> */}
-      <Hero/>
-      <Card/>
+      <Hero />
+      <Card />
     </div>
   )
 }
