@@ -19,7 +19,7 @@ const Card = () => {
             <div className="grid auto-cols-fr grid-cols-5 gap-y-6 gap-x-6">
               <div className="row-span-1 col-span-5">
                 <div className="px-16 py-16">
-                 <div className="bg-orange-500 rounded-lg inline-block  px-4 py-4">
+                 <div className="bg-gray-700 rounded-lg inline-block  px-4 py-4">
                     <div className='flex justify-center '>
                       <Image className='myPulse'
                       src={curlyImg}
@@ -41,12 +41,12 @@ const Card = () => {
                   <div className='p-2'></div>
                   <span className={share_tech_mono.className}>
                     <div className='text-lg'>
-                      Challenge yourself on small coding exercises called "kata". Each kata is crafted by the community to help you strengthen different coding techniques. Master your current language of choice, or quickly pick up any of the 55+ programming languages supported.
+                      <span>Challenge yourself on small coding exercises called &quot;kata&quot;. Each kata is crafted by the community to help you strengthen different coding techniques. Master your current language of choice, or quickly pick up any of the 55+ programming languages supported.</span>
                     </div>
                   </span>
                   <div className='p-4'></div>
                   <div className={share_tech_mono.className} >
-                    <Link href="/blog" className='hover:bg-orange-950 text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider'>
+                    <Link href="/blog" className='hover:bg-gray-700 text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider'>
                       Join the Dojo
                     </Link>
                   </div>

@@ -14,7 +14,7 @@ const Hero = () => {
     <div>
     <div className=" w-full text-center text-8xl font-light leading-tight text-white mt-96 ">
       <h1 className={share_tech_mono.className}> 
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-red-600  hover:drop-shadow-lg">Achieve mastery </span>
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-red-600  hover:drop-shadow-lg">Achieve mastery </span>
         <br />
         through challenge 
       </h1>
@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="p-6"></div>
       <div className="flex justify-center">
         <Link href="/blog" className={share_tech_mono.className}>
-          <button className="p-6 leading-6 hover:scale-125 tracking-widest font-normal text-black text-center text-2xl rounded-xl bg-red-500">Get Started</button>
+          <button className="p-6 leading-6 hover:scale-125 tracking-widest font-normal text-white text-center text-2xl rounded-xl bg-black">Get Started</button>
         </Link>
       </div>
     </div>
