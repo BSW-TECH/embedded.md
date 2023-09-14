@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+
+.white_btn {
+  @apply bg-transparent border rounded border-white bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center hover:scale-125;
+}
+
+.red_btn {
+  @apply  border rounded border-red-500 bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center hover:scale-125;
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  1%, 50% {
+    opacity: .0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.myPulse {
+  animation: pulse 3s cubic-bezier(0.0, 1, 0.0, 1) infinite;
+}
+
