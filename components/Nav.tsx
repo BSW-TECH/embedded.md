@@ -12,7 +12,7 @@ export const navData = [
 
 const Nav = () => {
     return (
-        <nav className="flex w-full  ">
+        <nav className="flex">
             <div className="flex justify-between items-center h-full w-full px-10 bg-black text-xl ">
                 <div className=" flex flex-row pt-3 pb-3 ">
                     <Link href="/" className="">

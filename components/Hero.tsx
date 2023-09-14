@@ -12,7 +12,7 @@ const share_tech_mono = Share_Tech_Mono({
 const Hero = () => {
   return (
     <div>
-      <div className=" w-full text-center text-8xl font-light leading-tight text-white mt-96 ">
+      <div className=" flex w-full text-center text-8xl font-light leading-tight text-white mt-96 flex-col">
         <h1 className={share_tech_mono.className}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-red-600  hover:drop-shadow-lg">Achieve mastery </span>
           <br />
@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="p-6"></div>
         <div className="flex justify-center">
           <Link href="/blog" className={share_tech_mono.className}>
-            <button className="p-6 leading-6 hover:scale-125 tracking-widest font-normal text-white text-center text-2xl rounded-xl bg-black">Get Started</button>
+            <button className="p-6 leading-6 tracking-widest font-normal text-white text-center text-2xl rounded-xl bg-black transition-transform hover:scale-125 transform duration-300">Get Started</button>
           </Link>
         </div>
       </div>
