@@ -1,4 +1,5 @@
-import React from 'react'
+
+
 import '/styles/globals.css'
 import Nav from '../components/Nav'
 
@@ -23,7 +24,7 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en">
-      <body >
+      <body className="dark">
         <main>
           <div className={share_tech_mono.className}>
             <Nav />

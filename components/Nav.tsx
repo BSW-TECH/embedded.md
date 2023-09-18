@@ -1,61 +1,103 @@
-import React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
+"use client"
+import React from "react";
 
-// nav data, for code optimisation in future
-export const navData = [
-    { name: 'blog', path: '/blog' },
-    { name: 'educators', path: '/educators' },
-    { name: 'companies', path: '/companies' },
-]
-
-const Nav = () => {
-    return (
-        <nav className="flex">
-            <div className="flex justify-between items-center h-full w-full px-10 bg-black text-xl ">
-                <div className=" flex flex-row pt-3 pb-3 ">
-                    <Link href="/" className="">
-                        {/* <Image
-                    src={"https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/64c17e87883a17f4153b301f_codewars-by-andela-dark.svg"}
-                    width={205}
-                    height={100}> 
-                    </Image> */}
-                        <div className="w-[205px] h-[100px] bg-white" />
-                    </Link>
-                    <ul className=" flex self-center">
-                        <Link href="/blog" className="flex gap-2 mr-4 ml-6 text-white hover:text-red-500">
-                            <li>Blog</li>
-                        </Link>
-                        <Link href="/educators" className="flex gap-2 mr-4 text-white hover:text-red-500">
-                            <li>Educators</li>
-                        </Link>
-                        <Link href="/companies" className="flex gap-2 mr-4 text-white hover:text-red-500">
-                            <li>Companies</li>
-                        </Link>
-                    </ul>
-
-                </div>
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
 
 
-                <div className="flex ">
-                    <ul className="flex">
-                        <Link href="/blog" className=" white_btn gap-2 mr-4">
-                            <li>Log In</li>
-                        </Link>
+export default function App() {
+  const menuItems = [
+    "Blog",
+    "Educators",
+    "Companies",
+  ];
 
-                        <Link href="/blog" className="red_btn gap-2 mr-4">
-                            <li>Join</li>
-                        </Link>
-                    </ul>
+  const userConnectItems = [
+    "Log In",
+    "Join",
+  ];
 
-                </div>
-            </div>
+  return (
+    <Navbar disableAnimation isBordered className="bg-white dark:bg-black ">
 
-            <hr className="h-px dark:bg-gray-700"></hr>
-        </nav>
-    )
 
+      <NavbarContent className="sm:hidden pr-3" justify="center">
+        <NavbarBrand>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarBrand>
+
+        </NavbarBrand>
+        <NavbarItem>
+          <Link color="foreground" href="#" className="hover:text-red-500 text-xl">
+            Blog
+          </Link>
+        </NavbarItem>
+        <NavbarItem >
+          <Link  color="foreground" href="#" className="hover:text-red-500 text-xl">
+            Educators
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#" className="hover:text-red-500 text-xl">
+            Companies
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem className="invisible sm:visible lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem className="flex flex-row gap-4">
+          <Button as={Link} className="invisible sm:visible" color="warning" href="#" variant="flat">
+          Log In
+          </Button>
+          <Button as={Link} className="invisible sm:visible" color="warning" href="#" variant="flat">
+            Join
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle className="dark:text-white"/>
+      </NavbarContent> 
+      <NavbarMenu>
+
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color="foreground"
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+        
+        {userConnectItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              href="#"
+              size="lg"
+            >
+            {/* <Button className="mt-1 w-screen border border-black dark:border-white bg-inherit hover:opacity-75"> */}
+            <Button as={Link} className="mt-1 w-screen border border-black dark:border-white bg-inherit " color="warning" href="#" variant="flat">
+              {item}
+            </Button>
+            </Link>
+
+            
+
+            
+          </NavbarMenuItem>
+        ))}
+
+
+      </NavbarMenu>
+    </Navbar>
+  );
 }
-
-export default Nav
