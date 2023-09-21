@@ -24,26 +24,26 @@ const Card = () => {
 
         <div className='flex flex-col sm:flex-row justify-between'>
           <div>
-            <h2 className='font-normal text-3xl pt-6'>
+            <h2 className='font-normal text-base sm:text-4xl pt-6 text-orange-500'>
               <div className={share_tech_mono.className}>
                 <span>Sharpen your coding  skills</span>
               </div>
             </h2>
             <div className='p-2'></div>
             <span className={share_tech_mono.className}>
-              <div className='text-lg'>
+              <div className='text-base sm:text-2xl'>
                 <span>Challenge yourself on small coding exercises called &quot;kata&quot;. Each kata is crafted by the community to help you strengthen different coding techniques. Master your current language of choice, or quickly pick up any of the 55+ programming languages supported.</span>
               </div>
             </span>
             <div className='p-4'></div>
             <div className={`${share_tech_mono.className} max-w-[180px]`}>
-              <Link href="/blog" className='flex hover:bg-gray-700 text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider flex-nowrap'>
+              <Link href="/blog" className='flex hover:bg-gray-700 text-base sm:text-xl text-center mt-4 font-normal border rounded-md  px-3 py-1.5 tracking-wider flex-nowrap'>
                 <span>Join the Dojo</span>
               </Link>
             </div>
           </div>
           <div>
-            <div className='flex flex-col w-screen sm:flex-row sm:w-[620px] h-[250px] mt-6 sm:ml-[35%] bg-red-600 border-8'></div>
+            <div className='flex flex-col w-full sm:flex-row sm:w-[620px] h-[250px] mt-6 sm:ml-[35%] bg-red-600 border-8'></div>
           </div>
         </div>
       </div>
