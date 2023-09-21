@@ -25,11 +25,11 @@ body {
 
 
 .white_btn {
-  @apply bg-transparent border rounded border-white bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center hover:scale-125;
+  @apply  border rounded border-white bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center ;
 }
 
 .red_btn {
-  @apply  border rounded border-red-500 bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center hover:scale-125;
+  @apply  border rounded border-red-500 bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex items-center justify-center ;
 }
 
 

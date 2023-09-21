@@ -1,7 +1,8 @@
-import React from 'react'
+
+
 import '/styles/globals.css'
 import Nav from '../components/Nav'
-
+import Providers from '@/providers/Providers'
 import { Inter, Share_Tech_Mono } from 'next/font/google'
 
 
@@ -22,13 +23,15 @@ export default function RootLayout(
     { children: React.ReactNode }
 ) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body >
         <main>
+          <Providers>
           <div className={share_tech_mono.className}>
             <Nav />
           </div>
           {children}
+          </Providers>
         </main>
       </body>
     </html>
