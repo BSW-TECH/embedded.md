@@ -18,7 +18,7 @@ const Home = () => {
       </Image>
       </div>
 
-      <div className="flex flex-col items-center relative">
+      <div className="flex flex-col items-center relative flex-wrap">
         <Hero />
         <Card />
       </div>
