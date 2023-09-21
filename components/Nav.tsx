@@ -1,10 +1,13 @@
 "use client"
-import React from "react";
+import React, {useState } from "react";
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
 
 
 export default function App() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuItems = [
     "Blog",
     "Educators",
@@ -26,7 +29,7 @@ export default function App() {
 
   return (
     
-    <Navbar shouldHideOnScroll isBordered className="bg-white dark:bg-black ">
+    <Navbar shouldHideOnScroll  className="bg-white dark:bg-black ">
 
     
       <NavbarContent className="flex" justify="center">
@@ -116,9 +119,11 @@ export default function App() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <div className="">
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle className="dark:text-white"/>
+      <NavbarContent className="sm:hidden" justify="end">
+            <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
+            className="dark:text-white w-[70px]" />
+
       </NavbarContent> 
       <NavbarMenu>
 
@@ -156,7 +161,6 @@ export default function App() {
 
 
       </NavbarMenu>
-      </div>
     </Navbar>
     
   );
