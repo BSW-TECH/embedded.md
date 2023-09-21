@@ -16,7 +16,7 @@ const Hero = () => {
         <h1 className={`${share_tech_mono.className}`}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-red-600  hover:drop-shadow-lg">Enter the embedded community </span>
           <br />
-          through challenge
+          <span>through challenge</span>
         </h1>
         <div className="pt-6"></div>
 

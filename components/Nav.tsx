@@ -1,8 +1,5 @@
 "use client"
 import React from "react";
-import bswLogo from '/public/assets/img/bsw-logo.jpeg'
-import Image from "next/image";
-
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
 

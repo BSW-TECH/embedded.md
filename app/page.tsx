@@ -3,13 +3,9 @@ import React from "react"
 import Hero from "@/components/Hero"
 import Card from "@/components/Card"
 import Image from "next/image"
-import pythonLogo from '/public/assets/img/python-logo-sm.svg'
 
-// 1. import `NextUIProvider` component
-// import {NextUIProvider} from "@nextui-org/react";
 const Home = () => {
   return (
-    // <NextUIProvider>
     <div className="relative w-full flex flex-center flex-col bg-gray-950">
       <div className="absolute inset-0">
       <Image
@@ -29,7 +25,6 @@ const Home = () => {
 
       <div className="w-full h-[800px]" /> Temporary transparent box for enabling scroll
     </div>
-    // </NextUIProvider>
   )
 }
 
