@@ -214,8 +214,8 @@ export default function App() {
                   >
                     Remember me
                   </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
+                  <Link color="foreground" href="#" size="sm">
+                    <span className="text-white">Forgot password?</span>
                   </Link>
                 </div>
               </ModalBody>
