@@ -2,16 +2,22 @@
 import React, {useState } from "react";
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Checkbox, Input} from "@nextui-org/react";
+import {MailIcon} from "@/components/nexUiSvgs/MailIcon"
+import {LockIcon} from "@/components/nexUiSvgs/LockIcon"
 
 
 export default function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   const menuItems = [
     "Blog",
-    "Educators",
-    "Companies",
+    "Wiki",
+    "Github",
+    "Projects",
+    "Products"
   ];
 
   const userConnectItems = [
@@ -95,28 +101,136 @@ export default function App() {
         </NavbarItem>
         <NavbarItem >
           <Link  color="foreground" href="/educators" className="hover:text-red-500 text-xl">
-            Educators
+            Wiki
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="/companies" className="hover:text-red-500 text-xl">
-            Companies
+            Github
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/companies" className="hover:text-red-500 text-xl">
+            Projects
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/companies" className="hover:text-red-500 text-xl">
+            Products
           </Link>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem className="flex flex-row gap-4">
-          <Link href={"/blog"}>
-          <Button  className="hidden sm:flex" color="warning" href="#" variant="flat">
-          Log In
-          </Button>
-          </Link>
-          <Link href={"/blog"}>
-          <Button className="hidden sm:flex" color="warning" href="#" variant="flat">
-            Join
-          </Button>
-          </Link>
+          <Button onPress={onOpen} color="warning" variant="flat" className="hidden sm:flex">Log In</Button>
+            <Modal 
+        isOpen={isOpen} 
+        onOpenChange={onOpenChange}
+        placement="top-center"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalBody>
+                <Input
+                  autoFocus
+                  endContent={
+                    <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Email"
+                  placeholder="Enter your email"
+                  variant="bordered"
+                />
+                <Input
+                  endContent={
+                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Password"
+                  placeholder="Enter your password"
+                  type="password"
+                  variant="bordered"
+                />
+                <div className="flex py-2 px-1 justify-between">
+                  <Checkbox
+                    classNames={{
+                      label: "text-small",
+                    }}
+                  >
+                    Remember me
+                  </Checkbox>
+                  <Link className="dark:text-white" color="primary" href="#" size="sm">
+                    Forgot password?
+                  </Link>
+                </div>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Sign in
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+      <Button onPress={onOpen} color="warning" className="hidden sm:flex">Join</Button>
+      <Modal 
+        isOpen={isOpen} 
+        onOpenChange={onOpenChange}
+        placement="top-center"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalBody>
+                <Input
+                  autoFocus
+                  endContent={
+                    <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Email"
+                  placeholder="Enter your email"
+                  variant="bordered"
+                />
+                <Input
+                  endContent={
+                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Password"
+                  placeholder="Enter your password"
+                  type="password"
+                  variant="bordered"
+                />
+                <div className="flex py-2 px-1 justify-between">
+                  <Checkbox
+                    classNames={{
+                      label: "text-small",
+                    }}
+                  >
+                    Remember me
+                  </Checkbox>
+                  <Link color="foreground" href="#" size="sm">
+                    <span className="text-white">Forgot password?</span>
+                  </Link>
+                </div>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Sign in
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">
