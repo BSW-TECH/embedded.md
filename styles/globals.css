@@ -46,6 +46,6 @@ body {
   }
 }
 .myPulse {
-  animation: pulse 3s cubic-bezier(0.0, 1, 0.0, 1) infinite;
+  animation: pulse 1s cubic-bezier(0.0, 1, 0.0, 1) infinite;
 }
 
