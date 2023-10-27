@@ -7,7 +7,7 @@ import { MailIcon } from "@/components/nexUiSvgs/MailIcon"
 import { LockIcon } from "@/components/nexUiSvgs/LockIcon"
 
 
-export default function App() {
+export default function Nav() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();

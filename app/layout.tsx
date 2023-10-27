@@ -1,10 +1,8 @@
-
-
 import '/styles/globals.css'
 import Nav from '../components/Nav'
 import Providers from '@/providers/Providers'
 import { Inter, Share_Tech_Mono } from 'next/font/google'
-
+import { LayoutProvider } from './layoutProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 const share_tech_mono = Share_Tech_Mono({
@@ -27,10 +25,9 @@ export default function RootLayout(
       <body >
         <main>
           <Providers>
-            <div className={share_tech_mono.className}>
-              <Nav />
-            </div>
-            {children}
+            <LayoutProvider>
+              {children}
+            </LayoutProvider>
           </Providers>
         </main>
       </body>
